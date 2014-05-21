@@ -1,0 +1,141 @@
+.menu {
+  position: fixed;
+  right: -200px;
+  width: 260px;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  text-align: left;
+}
+
+.menu.menu-open {
+  right: 0px;
+}
+
+.menu-wrap {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  background: #021016;
+  width: 200px;
+  height: 100%;
+}
+
+.menu h1.logo a {
+  //font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.menu h1.logo a:hover {
+  color: #f85c37;
+}
+
+.menu img.logo {
+  margin: 20px 0;
+  max-width: 160px;
+}
+
+.menu a {
+  margin-left: 20px;
+  color: #808080;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu a > i {
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  width: 25px;
+  font-size: 14px;
+  line-height: 40px;
+  margin: 25px 2px;
+}
+
+.menu-close {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  font-size: 14px;
+  color: #808080;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  top: 20px;
+  right: 15px;
+  @include transition(all .1s ease-in-out);
+}
+
+.menu-close:hover {
+  color: #ffffff;
+  @include transition(all .1s ease-in-out);
+}
+
+/* Push the body after clicking the menu button */
+.body-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
+.body-push-to-left,
+.body-push-to-right {
+  position: static;
+}
+
+.body-push-to-right {
+  left: 200px;
+}
+
+.body-push-to-left {
+  left: -200px;
+}
+
+.menu,
+.body-push {
+  @include transition(all .1s ease-in-out);
+}
+
+#menu-toggle {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 11;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.50);
+  @include transition(all .1s ease-in-out);
+}
+
+#menu-toggle:hover {
+  color: #e24b30;
+  background: rgba(0,0,0,0.5);
+  @include transition(all .1s ease-in-out);
+}

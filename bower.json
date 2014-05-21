@@ -1,0 +1,12 @@
+{
+  "name": "honda-web-client",
+  "version": "0.0.0",
+  "dependencies": {
+    "requirejs": "~2.1.4",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.9.1",
+    "bootstrap-sass-official": "~3.1.1+2",
+    "loglevel": "~0.6.0"
+  },
+  "devDependencies": {}
+}

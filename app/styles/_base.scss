@@ -1,0 +1,63 @@
+body {
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
+#primary-content {
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+.branding-container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#footer-content {
+  position: relative;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.text-legal {
+  font-size: $honda-legal-font-size;
+}
+
+.vertical-rule {
+  position: relative;
+  top: 0px;
+  left: auto;
+  right: auto;
+  width: 1px;
+  height: 70px;
+  background-color: transparentize($honda-vertical-rule-color, .50);
+}
+
+@media (min-width: $screen-md-min){
+
+  #primary-content {
+    margin-top: 110px;
+    padding-top: 40px;
+  }
+
+  body {
+    position: relative;
+    min-height: 560px;
+    background-image: image-url('bg_wall.jpg'), image-url('bg_tiled.png');
+    background-repeat: repeat-x, repeat;
+    background-color: none;
+  }
+
+  .branding-container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #footer-content {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    padding-top: 0;
+  }
+}
