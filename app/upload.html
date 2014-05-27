@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Home | Honda Perfect Play</title>
+  <title>Upload | Honda Perfect Play</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -16,7 +16,7 @@
   <script src="bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 </head>
-<body class="home" data-spy="scroll" data-offset="0" data-target="#flyout-menu">
+<body class="upload" data-spy="scroll" data-offset="0" data-target="#flyout-menu">
 
   <nav class="menu" id="flyout-menu">
     <div class="menu-wrap">
@@ -69,89 +69,73 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-7">
-        <div class="carousel-container">
 
-          <div id="showcase-carousel" class="carousel slide" data-ride="carousel">
-
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#showcase-carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#showcase-carousel" data-slide-to="1"></li>
-              <li data-target="#showcase-carousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="http://lorempixel.com/700/393/sports/1/" alt="">
-                <div class="carousel-caption">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sapiente sint commodi labore dicta laboriosam perspiciatis esse voluptate alias dolorum. Tempore ea, vitae aspernatur placeat earum quisquam molestias. Totam, minima!
-                </div>
-              </div>
-              <div class="item">
-                <img src="http://lorempixel.com/700/393/sports/2/" alt="">
-                <div class="carousel-caption">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus placeat sed facere fugit dignissimos nisi doloribus natus eaque ad nobis quos eum mollitia vero repellendus illo voluptatem, alias aliquam magni?
-                </div>
-              </div>
-              <div class="item">
-                <img src="http://lorempixel.com/700/393/sports/3/" alt="">
-                <div class="carousel-caption">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nam ipsum ex architecto, quaerat praesentium quisquam expedita, illum enim nemo laboriosam. Rem modi, doloribus. Culpa, veritatis deleniti hic quae enim.
-                </div>
-              </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#showcase-carousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#showcase-carousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-          </div>
-
+        <div class="heading-container">
+          <h1>Upload Your Video</h1>
         </div>
 
         <div class="messaging-container">
-          <p>Great plays happen every day in Little League<sup class="reg">&reg;</sup>. Upload videos of your Little Leaguer's biggest moments and they could end up on ESPN! Select videos will be featured every week right here and the best of the best will be broadcast on SportsCenter during the Little League World Series.</p>
+          <hr class="divider">
+          <p>Big hits ... slick fielding ... great teamwork! Share all of your child's big Little League Baseball<sup class="reg">&reg;</sup> moments now. We'll share select videos right here every week, and the best will be seen on SportsCenter during the Little League Baseball<sup class="reg">&reg;</sup> World Series.</p>
+          <hr class="divider">
         </div>
 
-        <div class="cta-container">
-          <button class="btn btn-lg center-block btn-honda" data-control-action="upload-video">
-            <span class="btn-text">Upload Video</span>
-            <span class="btn-icon icon-chevron-right"></span>
-          </button>
-        </div>
+        <div class="upload-container">
+          <ul class="upload-specifications list-unstyled">
+            <li><span class="specification-name">Accepted video file types</span>:  .mov, .mp4, .mpeg4, .m4v, .wmv, 3GPP, WebM</li>
+            <li><span class="specification-name">File size</span>:  must not exceed 15MB</li>
+            <li><span class="specification-name">Video duration</span>:  must be 30 seconds or less</li>
+          </ul>
 
+          <div class="row upload-form-container">
+            <div class="col-xs-12 col-md-3">
+              <div class="feedback-container center-block">
+                <div class="thumbnail-placeholder"></div>
+                <div class="feedback">
+                  <p class="message">Select video to upload</p>
+                  <div class="progress-container">
+                    <div class="progress"></div>
+                  </div>
+                  <div class="file-info">
+                    <ul class="list-unstyled">
+                      <li class="file-name-container">File name: <span id="file-name"></span></li>
+                      <li class="file-size-container">File size: <span id="file-size"></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-9">
+              <div class="row">
+                <div class="col-xs-12">
+                  <textarea name="video-description" class="form-control" placeholder="Write a description of your child's SportsCenter worthy highlight in this space..."></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <input type="file" name="video-file" accept="">
+                  <button class="btn btn-honda" data-control-action="select-video">
+                    <span class="btn-text">Select Video</span>
+                    <span class="btn-icon icon-chevron-right"></span>
+                  </button>
+                </div>
+                <div class="col-xs-6">
+                  <button class="btn btn-honda" data-control-action="submit-video">
+                    <span class="btn-text">Submit Video</span>
+                    <span class="btn-icon icon-chevron-right"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div id="secondary-content" class="container">
+
+  <div id="footer-content" class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-5">
-        <div class="logo-container odyssey">
-          <a href="javascript:void(0);" class="text-hide" title="2014 Honda Odyssey" target="_blank">2014 Honda Odyssey</a>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-7">
-        <div class="sweepstakes-messaging-container">
-          <h2 class="heading">Enter for a chance to win</h2>
-          <h6 class="subheading">A 2014 Honda Odyssey and a trip to the Little League World Series.</h6>
-        </div>
-        <div class="cta-container">
-          <button class="btn btn-honda" data-control-action="enter-sweepstakes">
-            <span class="btn-text">Start Here</span>
-            <span class="btn-icon icon-chevron-right"></span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="footer-container" class="container">
-    <div id="footer-content" class="row">
 
       <div class="visible-xs col-xs-12">
         <div class="branding-container">
@@ -176,6 +160,10 @@
         <p class="text-center text-legal">&copy;2014 Little League Baseball, Incorporated. All rights reserved.</p>
       </div>
     </div>
+  </div>
+
+  <div class="hide-target">
+
   </div>
   <!-- build:js scripts/main.js -->
   <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>

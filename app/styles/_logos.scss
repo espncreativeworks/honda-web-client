@@ -1,3 +1,6 @@
+$honda-branding-footer-bg-color: $honda-dark-grey;
+$honda-branding-footer-border-color: $honda-red;
+
 $branding-footer-max-width: 330px;
 $branding-footer-height: 70px;
 $branding-footer-vertical-padding: 14px;
@@ -6,6 +9,8 @@ $logo-perfect-play-default: $image-path + 'logo_perfect_play_v2.png';
 $logo-perfect-play-hires: $image-path + 'logo_perfect_play_v2@2x.png';
 $logo-perfect-play-width: 300px;
 $logo-perfect-play-height: 259px;
+$logo-perfect-play-width-xs: 150px;
+$logo-perfect-play-height-xs: 130px;
 
 $logo-little-league-default: $image-path + 'logo_little_league.png';
 $logo-little-league-hires: $image-path + 'logo_little_league@2x.png';
@@ -17,6 +22,13 @@ $logo-honda-hires: $image-path + 'logo_honda@2x.png';
 $logo-honda-width: 93px;
 $logo-honda-height: 59px;
 
+$logo-odyssey-default: $image-path + 'honda_odyssey.png';
+$logo-odyssey-hires: $image-path + 'honda_odyssey@2x.png';
+$logo-odyssey-width: 329px;
+$logo-odyssey-height: 198px;
+$logo-odyssey-width-xs: 247px;
+$logo-odyssey-height-xs: 149px;
+
 $logo-espn-default: $image-path + 'logo_espn.png';
 $logo-espn-hires: $image-path + 'logo_espn@2x.png';
 $logo-espn-hover-default: $image-path + 'logo_espn_hover.png';
@@ -27,11 +39,12 @@ $logo-espn-height: 21px;
 .branding-footer {
   max-width: $branding-footer-max-width;
   margin-top: 30px;
+  margin-bottom: 30px;
   padding-top: $branding-footer-vertical-padding;
   padding-bottom: $branding-footer-vertical-padding;
-  border-top: 1px solid $honda-branding-footer-border-color;
-  border-bottom: 1px solid $honda-branding-footer-border-color;
-  background-color: $honda-branding-footer-bg-color;
+  //border-top: 1px solid $honda-branding-footer-border-color;
+  //border-bottom: 1px solid $honda-branding-footer-border-color;
+  background-color: transparent;
 }
 
 .logo-container {
@@ -46,9 +59,11 @@ $logo-espn-height: 21px;
   }
 
   &.perfect-play {
-    width: $logo-perfect-play-width;
-    height: $logo-perfect-play-height;
-    @include img-retina($logo-perfect-play-default, $logo-perfect-play-hires, $logo-perfect-play-width, $logo-perfect-play-height);
+    width: $logo-perfect-play-width-xs;
+    height: $logo-perfect-play-height-xs;
+    margin-left: 0px;
+    margin-right: 0px;
+    @include img-retina($logo-perfect-play-default, $logo-perfect-play-hires, $logo-perfect-play-width-xs, $logo-perfect-play-height-xs);
   }
 
   &.little-league {
@@ -65,6 +80,12 @@ $logo-espn-height: 21px;
     @include img-retina($logo-honda-default, $logo-honda-hires, $logo-honda-width, $logo-honda-height);
   }
 
+  &.odyssey {
+    width: $logo-odyssey-width-xs;
+    height: $logo-odyssey-height-xs;
+    @include img-retina($logo-odyssey-default, $logo-odyssey-hires, $logo-odyssey-width-xs, $logo-odyssey-height-xs);
+  }
+
   &.espn {
     display: inline-block;
     width: $logo-espn-width;
@@ -78,5 +99,43 @@ $logo-espn-height: 21px;
       @include img-retina($logo-espn-hover-default, $logo-espn-hover-hires, $logo-espn-width, $logo-espn-height);
     }
   }
+
+}
+
+
+@media (min-width: $screen-sm-min){
+  .logo-container {
+
+    &.perfect-play {
+      width: $logo-perfect-play-width;
+      height: $logo-perfect-play-height;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: $logo-perfect-play-width $logo-perfect-play-height;
+    }
+
+    &.odyssey {
+      width: 100%;
+      max-height: $logo-odyssey-height;
+      background-size: contain;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min){
+  .branding-footer {
+    background-color: $honda-branding-footer-bg-color;
+  }
+
+  .logo-container {
+    &.odyssey {
+      width: $logo-odyssey-width;
+      height: $logo-odyssey-height;
+      background-size: $logo-odyssey-width $logo-odyssey-height;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min){
 
 }

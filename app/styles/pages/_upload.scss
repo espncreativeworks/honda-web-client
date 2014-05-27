@@ -1,0 +1,111 @@
+$feedback-container-min-width: 100px;
+$feedback-container-max-width: 200px;
+$feedback-container-min-height: 150px;
+$feedback-container-max-height: 200px;
+
+.upload-container {
+
+  .upload-specifications {
+    padding: 0;
+    margin: 0;
+  }
+
+  .upload-specifications li {
+    padding-left: 1em;
+    text-indent: -.7em;
+  }
+
+  .upload-specifications li:before {
+    content: "•";
+    color: $honda-red;
+    padding-right: 12px;
+  }
+
+  .upload-form-container {
+    padding-top: 40px;
+    padding-bottom: 120px;
+  }
+
+  .feedback-container {
+    font-size: 11px;
+    min-width: $feedback-container-min-width;
+    max-width: $feedback-container-max-width;
+    min-height: $feedback-container-min-height;
+    max-height: $feedback-container-max-width;
+  }
+
+  .feedback-container .thumbnail-placeholder {
+    min-width: inherit;
+    max-width: inherit;
+    min-height: $feedback-container-min-height * .80;
+    max-height: $feedback-container-max-height * .80;
+    border: 3px dashed $honda-red;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .feedback-container .feedback {
+    min-width: inherit;
+    max-width: inherit;
+    min-height: $feedback-container-min-height * .20;
+    max-height: $feedback-container-max-height * .20;
+  }
+
+  .feedback-container .message,
+  .feedback-container .progress,
+  .feedback-container .file-info {
+    display: none;
+  }
+
+  .feedback-container.has-message {
+    .message {
+      display: block;
+    }
+  }
+
+  .feedback-container.has-progress {
+    .progress {
+      display: block;
+    }
+  }
+
+  .feedback-container.has-file-info {
+    .file-info {
+      display: block;
+    }
+  }
+
+  [name="video-description"] {
+    min-height: 100px;
+    padding: 12px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    resize: none;
+  }
+
+  input[type="file"] {
+    position: relative;
+    opacity: 0;
+    width: 160px;
+    height: 33px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  input[type="file"] + button[data-control-action="select-video"] {
+    position: relative;
+    top: -33px;
+    z-index: 0;
+  }
+
+}
+
+@media (min-width: $screen-md-min){
+  .upload-container {
+
+    [name="video-description"] {
+      margin-top: 0px;
+    }
+  }
+}

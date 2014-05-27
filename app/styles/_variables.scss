@@ -1,14 +1,16 @@
 $image-path: "../images/";
+$icon-font-path: '../fonts/';
+
+// Project-specific
+$honda-red: #e1482d;
+$honda-dark-grey: #003d38;
+$honda-dark-blue: #010a10;
 
 // Bootstrap Overrides
 $bootstrap-sass-asset-helper: false;
+$font-family-sans-serif: 'adelle-sans';
 
 $body-bg: #003d28;
 $text-color: #fff;
 $font-size-base: 15px;
-
-// Project-specific
-$honda-legal-font-size: 13px;
-$honda-branding-footer-bg-color: #041014;
-$honda-branding-footer-border-color: #de482d;
-$honda-vertical-rule-color: #e1482e;
+$link-color: $honda-red;

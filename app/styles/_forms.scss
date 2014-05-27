@@ -1,0 +1,58 @@
+[role="form"] .form-group {
+  margin-bottom: 12px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-top: 5px;
+  margin-left: 0px;
+  opacity:0;
+  cursor: pointer;
+}
+
+.checkbox [type="checkbox"] + span.checkbox-label {
+  margin-left: 15px;
+}
+
+.checkbox [type="checkbox"] + span.checkbox-label:before {
+  content: "";
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 5px 0 0 -15px;
+  padding: 0;
+  border: 2px solid $honda-red;
+}
+
+.checkbox [type="checkbox"]:checked + span.checkbox-label:before {
+  content: "✓";
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 5px 0 0 -15px;
+  padding: 0;
+  border: 2px solid $honda-red;
+  font-size: 15px;
+  line-height: 12px;
+  text-indent: -2px;
+}
+
+.memberservices {
+  margin-top: 22px;
+
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.form-controls {
+  padding-top: 40px;
+  padding-bottom: 140px;
+}
+
+@media (min-width: $screen-md-min){
+  [role="form"] .form-group {
+    margin-bottom: 0px;
+  }
+}

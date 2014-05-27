@@ -1,5 +1,5 @@
 /*global define */
-define(['require', 'jquery', 'loglevel'], function (require, $, log){
+define(['require', 'jquery', 'loglevel'], function (require){
   'use strict';
 
   var exports = {}

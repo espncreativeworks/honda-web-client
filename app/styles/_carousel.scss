@@ -1,0 +1,73 @@
+$active-indicator-color: $honda-red;
+
+.carousel {
+
+  .carousel-control {
+    display: none;
+    background-image: none;
+  }
+
+  .carousel-caption {
+    display: none;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: transparentize($honda-dark-grey, 0.20);
+  }
+
+  .carousel-indicators {
+    bottom: 0px;
+    margin-bottom: -40px;
+
+    li {
+      background: #fff;
+      border-color: transparent;
+    }
+
+    li.active {
+      background: $active-indicator-color;
+      border-color: $active-indicator-color;
+    }
+  }
+}
+
+
+@media (min-width: $screen-md-min){
+
+  .carousel {
+
+    .carousel-control {
+      display: block;
+    }
+
+    .carousel-caption {
+      display: block;
+      @include transition(height 0.4s ease);
+    }
+
+    &:hover .carousel-caption {
+      height: 33%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+  }
+
+}
+
+@media (min-width: $screen-lg-min){
+
+  .carousel {
+
+    &:hover .carousel-caption {
+      height: 25%;
+    }
+
+  }
+
+}

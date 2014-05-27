@@ -1,3 +1,6 @@
+$honda-legal-font-size: 13px;
+$honda-vertical-rule-color: $honda-red;
+
 body {
   background-image: none;
   background-repeat: no-repeat;
@@ -5,18 +8,28 @@ body {
 
 #primary-content {
   margin-top: 0px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .branding-container {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-#footer-content {
+#footer-container {
   position: relative;
   width: 100%;
   padding-top: 40px;
+  background-color: white;
+  color: $honda-dark-grey;
+}
+
+#footer-content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 22px;
+  border-top: 1px solid $honda-red;
 }
 
 .text-legal {
@@ -53,11 +66,4 @@ body {
     margin-bottom: 0;
   }
 
-  #footer-content {
-    position: absolute;
-    bottom: 0;
-    left: auto;
-    right: auto;
-    padding-top: 0;
-  }
 }

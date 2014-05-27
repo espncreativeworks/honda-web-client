@@ -1,0 +1,94 @@
+$messaging-border-color: $honda-red;
+$sweepstakes-messaging-text-color: $honda-dark-blue;
+
+body.home {
+
+  .carousel-container {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .messaging-container {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 1px solid $messaging-border-color;
+    border-bottom: 1px solid $messaging-border-color;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  #secondary-content {
+    width: 100%;
+    min-height: 200px;
+    margin-top: 112px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    background-image: none;
+
+    .logo-container.odyssey {
+      margin-top: -33px;
+    }
+  }
+
+  .sweepstakes-messaging-container {
+    color: $sweepstakes-messaging-text-color;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    .heading {
+      font-size: 41px;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+
+    .subheading {
+      font-size: 15px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min){
+
+  body.home {
+
+    .carousel-container {
+      padding-top: 0;
+    }
+
+    #secondary-content {
+      margin-top: 72px;
+
+      .logo-container.odyssey {
+        margin-top: 30px;
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: $screen-md-min){
+
+  body.home {
+    #secondary-content {
+      margin-top: 72px;
+
+      .logo-container.odyssey {
+        margin-top: -33px;
+        margin-left: 0;
+        margin-right: 0;
+        float: right;
+      }
+    }  
+  }
+
+}
