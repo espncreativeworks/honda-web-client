@@ -14,7 +14,7 @@ define(['require', 'loglevel', 'webfontloader'], function (require){
 
   exports.init = function(){
     WebFont.load(config);
-    log.info('running fonts.js');
+    log.info('fonts.js initialized');
   };
 
   return exports;

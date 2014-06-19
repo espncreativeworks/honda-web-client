@@ -1,5 +1,15 @@
-$honda-legal-font-size: 13px;
-$honda-vertical-rule-color: $honda-red;
+.container.lte-ie8 {
+  display: none;
+}
+
+html.lt-ie9 {
+  .container {
+    display: none;
+  }
+  .container.lte-ie8 {
+    display: block;
+  }
+}
 
 body {
   background-image: none;
@@ -20,30 +30,19 @@ body {
   position: relative;
   width: 100%;
   padding-top: 40px;
-  background-color: white;
-  color: $honda-dark-grey;
+  color: white;
 }
 
 #footer-content {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
   padding-top: 22px;
-  border-top: 1px solid $honda-red;
 }
 
-.text-legal {
-  font-size: $honda-legal-font-size;
-}
-
-.vertical-rule {
-  position: relative;
-  top: 0px;
-  left: auto;
-  right: auto;
-  width: 1px;
-  height: 70px;
-  background-color: transparentize($honda-vertical-rule-color, .50);
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+  #primary-content-column {
+    padding-top: 60px;
+  }
 }
 
 @media (min-width: $screen-md-min){
@@ -51,12 +50,13 @@ body {
   #primary-content {
     margin-top: 110px;
     padding-top: 40px;
+    min-height: 620px;
   }
 
   body {
     position: relative;
     min-height: 560px;
-    background-image: image-url('bg_wall.jpg'), image-url('bg_tiled.png');
+    background-image: url($image-path + 'bg_wall.jpg'), url($image-path + 'bg_tiled.png');
     background-repeat: repeat-x, repeat;
     background-color: none;
   }
@@ -66,4 +66,16 @@ body {
     margin-bottom: 0;
   }
 
+  #footer-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (min-width: $screen-lg-min){
+  #footer-content {
+    width: 70%;
+  }
 }

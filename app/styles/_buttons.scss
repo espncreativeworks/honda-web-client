@@ -3,16 +3,17 @@ $hodna-btn-divider-color: $honda-dark-grey;
 
 .btn-honda {
   position: relative;
-  padding: 0;
+  display: inline-block;
   border: none;
   border-radius: 0px;
   background-image: none;
   background-color: $honda-btn-bg-color;
+  color: white;
 
   .btn-text,
   .btn-icon {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 10px 12px;
   }
 
   .btn-text {
@@ -35,6 +36,10 @@ $hodna-btn-divider-color: $honda-dark-grey;
     outline: 0;
     background-image: none;
     @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.has-children {
+    padding: 0;
   }
 
 }

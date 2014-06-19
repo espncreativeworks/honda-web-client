@@ -1,0 +1,27 @@
+body.legal {
+
+  .nav-tabs-honda {
+    padding-top: 40px;
+
+    .active button {
+      @include tab-focus();
+    }
+
+    li {
+      padding-top: 12px;
+    }
+  }
+
+}
+
+@media (min-width: $screen-md-min){
+
+  body.legal {
+    position: relative;
+    min-height: 560px;
+    background-image: url($image-path + 'bg_wall_green.jpg');
+    background-repeat: repeat-x;
+    background-color: #032318;
+  }
+  
+}

@@ -1,3 +1,6 @@
+$honda-legal-font-size: 13px;
+$honda-vertical-rule-color: $honda-red;
+
 sup.reg {
   font-weight: 300;
 }
@@ -6,9 +9,42 @@ hr.divider {
   border-top-color: $honda-red;
 }
 
-.hide-target {
+.text-legal {
+  font-size: $honda-legal-font-size;
+}
+
+.no-purchase {
+  text-transform: uppercase;
+}
+
+.vertical-rule {
+  position: relative;
+  top: 0px;
+  left: auto;
+  right: auto;
+  width: 1px;
+  height: 70px;
+  background-color: transparentize($honda-vertical-rule-color, .50);
+}
+
+#scratchpad {
   width: 100%;
   height: 1px;
   opacity: 0;
   overflow: hidden;
+}
+
+#colorbox,
+#colorbox *,
+#colorbox *:before,
+#colorbox *:after,
+[id^="cbox"],
+[id^="cbox"] *,
+[id^="cbox"] *:before,
+[id^="cbox"] *:after, {
+  @include box-sizing(content-box);
+}
+
+#colorbox {
+  padding-right: 44px !important;
 }

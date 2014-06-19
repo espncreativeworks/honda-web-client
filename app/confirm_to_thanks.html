@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Home | Honda Perfect Play</title>
+  <title>Confirm | Honda Perfect Play</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -16,7 +16,7 @@
   <script src="bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 </head>
-<body class="home" data-spy="scroll" data-offset="0" data-target="#flyout-menu">
+<body class="confirm" data-spy="scroll" data-offset="0" data-target="#flyout-menu">
 
   <nav class="menu" id="flyout-menu">
     <div class="menu-wrap">
@@ -71,90 +71,85 @@
           </div>
         </div>
       </div>
-      <div id="primary-content-column" class="col-xs-12 col-sm-6 col-md-7">
-        <div class="carousel-container">
+      <div class="col-xs-12 col-sm-6 col-md-7">
 
-          <div id="showcase-carousel" class="carousel slide" data-ride="carousel">
+        <div class="heading-container">
+          <h1>Confirm Your Info</h1>
+        </div>
 
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#showcase-carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#showcase-carousel" data-slide-to="1"></li>
-              <li data-target="#showcase-carousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                <video class="video-honda" controls="">
-                  <source type="video/mp4" src="http://a.espncdn.com/contests/honda/2014/perfectplay/videos/howard-ashley.mp4"></source>
-                  <source type="video/webm" src="http://a.espncdn.com/contests/honda/2014/perfectplay/videos/howard-ashley.webm"></source>
-                </video>
-              </div>
-              <div class="item">
-                <video class="video-honda" controls="">
-                  <source type="video/mp4" src="http://a.espncdn.com/contests/honda/2014/perfectplay/videos/sands-annalise.mp4"></source>
-                  <source type="video/webm" src="http://a.espncdn.com/contests/honda/2014/perfectplay/videos/sands-annalise.webm"></source>
-                </video>
-              </div>
-              <div class="item">
-                <video class="video-honda" controls="">
-                  <source type="video/mp4" src="http://a.espncdn.com/contests/honda/2014/perfectplay/videos/duque-christina.mp4"></source>
-                  <source type="video/webm" src="http://a.espncdn.com/contests/honda/2014/perfectplay/videos/duque-christina.webm"></source>
-                </video>
+        <div class="authentication-container">
+          <form id="confirm" action="thanks_from_sweepstakes.html" role="form">
+            <hr class="divider form">
+            <div class="form-group row">
+              <label for="first-name" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <p class="form-control-static" id="first-name">John</p>
               </div>
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#showcase-carousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#showcase-carousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-          </div>
-
+            <div class="form-group row">
+              <label for="email" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <p class="form-control-static" id="email">john.doe@mydomain.com</p>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="address" class="col-sm-2 control-label">Address</label>
+              <div class="col-sm-10">
+                <p class="form-control-static" id="address">123 ABC Drive, New York, NY 10001</p>
+              </div>
+            </div>
+            <div class="form-group row memberservices">
+              <div class="col-sm-12">
+                <p class="hidden-xs">
+                  Incorrect Info? <a tref="/members/v3_1/modifyAccount" href="" data-regformid="espn_contests" data-language="en" data-affiliatename="espn_contests" class="cbOverlay">Update it</a>.
+                </p>
+                <p class="visible-xs">
+                  Incorrect Info? <a href="http://m.espn.go.com/wireless/recoveraccount" class="" target="_blank">Update it</a>.
+                </p>
+              </div>
+              <div class="col-sm-12">
+                <p class="hidden-xs">
+                  Not this user? <a href="javascript:void(0);" data-control-action="logout">Logout</a>.
+                </p>
+                <p class="visible-xs">
+                  Not this user? <a href="http://m.espn.go.com/wireless/login?logout">Logout</a>.
+                </p>
+              </div>
+            </div>
+            <hr class="divider form">
+            <div class="form-group row">
+              <div class="col-xs-12">
+                <div class="checkbox">
+                  <input type="checkbox" name="toc">
+                  <span class="checkbox-label toc-label">I have read and agree to the <a href="legal.html#terms-and-conditions">Terms &amp; Conditions</a> and <a href="legal.html#official-rules">Official Rules</a>.</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-xs-12">
+                <div class="checkbox">
+                  <input type="checkbox" name="optin-code">
+                  <span class="checkbox-label optin-label">Opt-in copy TBD</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-xs-12 form-controls">
+                <button type="submit" class="btn btn-honda btn-lg" data-control-action="confirm">
+                  <span class="btn-text">Confirm</span>
+                  <span class="btn-icon icon-chevron-right"></span>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-
-        <div class="messaging-container">
-          <p>Great plays happen every day in Little League<sup class="reg">&reg;</sup>. Upload videos of your Little Leaguer's biggest moments and they could end up on ESPN! Select videos will be featured every week right here and the best of the best will be broadcast on SportsCenter during the Little League World Series.</p>
-        </div>
-
-        <div class="cta-container text-center">
-          <a class="cbOverlay btn btn-lg btn-honda has-children" href="" tref="/members/v3_1/login" data-appRedirect="http://localhost:9001/upload.html" data-regformid="espn_contests" data-affiliatename="espn_contests" data-language="en" data-control-action="login" data-floodlight-cat="endtl345">
-            <span class="btn-text">Upload Video</span>
-            <span class="btn-icon icon-chevron-right"></span>
-          </a>
-        </div>
-
       </div>
     </div>
   </div>
 
-  <div id="secondary-content" class="container">
+
+  <div id="footer-content" class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-5">
-        <div class="logo-container odyssey">
-          <a href="javascript:void(0);" class="text-hide" title="2014 Honda Odyssey" target="_blank">2014 Honda Odyssey</a>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-7">
-        <div class="sweepstakes-messaging-container">
-          <h2 class="heading">Enter for a chance to win</h2>
-          <h6 class="subheading">A 2014 Honda Odyssey and a trip to the Little League World Series.</h6>
-        </div>
-        <div class="cta-container">
-          <a class="btn btn-honda has-children" href="" data-control-action="enter-sweepstakes">
-            <span class="btn-text">Start Here</span>
-            <span class="btn-icon icon-chevron-right"></span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="footer-container" class="container">
-    <div id="footer-content" class="row">
 
       <div class="visible-xs col-xs-12">
         <div class="branding-container">
@@ -165,10 +160,11 @@
               </div>
             </div>
             <div class="col-xs-6">
-              <div class="logo-container honda dark">
+              <div class="logo-container honda">
                 <a href="" class="text-hide" title="Honda: The Official Vehicle of Little League Baseball" target="_blank">Honda: The Official Vehicle of Little League Baseball</a>
               </div>
             </div>
+            <!-- <div class="vertical-rule center-block"></div> -->
           </div>
         </div>
       </div>
@@ -179,9 +175,6 @@
       </div>
     </div>
   </div>
-
-  <div class="hide"></div>
-
   <!-- build:js scripts/main.js -->
   <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
   <!-- endbuild -->

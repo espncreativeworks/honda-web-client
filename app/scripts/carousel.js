@@ -1,11 +1,12 @@
 /*global define */
-define(['require', 'jquery', 'loglevel', 'hammer'], function (require){
+define(['require', 'jquery', 'loglevel', 'hammer', 'video'], function (require){
   'use strict';
 
   var exports = {}
     , $ = require('jquery')
     , log = require('loglevel')
     , Hammer = require('hammer')
+    , video = require('video')
     , opts = {
       hammer: {
         //preventDefault: true,
@@ -13,7 +14,7 @@ define(['require', 'jquery', 'loglevel', 'hammer'], function (require){
       },
       carousel: {
         interval: 4000,
-        pause: 'click',
+        pause: 'hover',
         wrap: true
       }
     };
@@ -22,6 +23,7 @@ define(['require', 'jquery', 'loglevel', 'hammer'], function (require){
     var $carousel, hammertime;
     if ($('#showcase-carousel').length){
       $carousel = $('#showcase-carousel').carousel(opts.carousel);
+      $carousel.carousel('pause');
       hammertime = new Hammer($carousel.get(0), opts.hammer);
       hammertime.on('swipeleft', function(){
         log.info('handled swipeleft');
@@ -31,8 +33,9 @@ define(['require', 'jquery', 'loglevel', 'hammer'], function (require){
         log.info('handled swiperight');
         $carousel.carousel('prev');
       });
+      video.init();
     }
-    log.info('running carousel.js');
+    log.info('carousel.js initialized');
   };
 
   return exports;

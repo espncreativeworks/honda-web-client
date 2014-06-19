@@ -1,5 +1,5 @@
 /*global define */
-define(['require', 'jquery', 'loglevel', 'fastclick', './menu', './carousel', './upload', './legal'], function (require){
+define(['require', 'jquery', 'loglevel', 'fastclick', './menu', './carousel', './confirm', './members', './upload', './social', './legal', './utils/floodlight'], function (require){
   'use strict';
 
   var exports = {}
@@ -8,16 +8,25 @@ define(['require', 'jquery', 'loglevel', 'fastclick', './menu', './carousel', '.
     , FastClick = require('fastclick')
     , menu = require('menu')
     , carousel = require('carousel')
+    , confirm = require('confirm')
+    , members = require('members')
     , upload = require('upload')
-    , legal = require('legal');
+    , social = require('social')
+    , legal = require('legal')
+    , floodlight = require('utils/floodlight');
 
   exports.init = function(){
     FastClick.attach(document.body);
+    members.init();
     menu.init();
     carousel.init();
+    confirm.init();
     upload.init();
+    social.init();
     legal.init();
-    log.info('running app.js');
+    floodlight.init();
+    log.info('running jQuery v' + $.fn.jquery);
+    log.info('app.js initialized');
   };
 
   return exports;

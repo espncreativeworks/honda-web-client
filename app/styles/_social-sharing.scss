@@ -1,0 +1,34 @@
+$social-sharing-line-height: 34px;
+$social-sharing-margin-top: 10.5px;
+$social-sharing-margin-bottom: 10.5px;
+$social-sharing-messaging-font-size: 22px;
+$social-sharing-options-font-size: 34px;
+
+.social-sharing-container {
+
+  padding-top: 15px;
+  padding-top: 8px;
+
+  .social-sharing-messaging {
+    margin-top: $social-sharing-margin-top;
+    margin-bottom: $social-sharing-margin-bottom;
+    line-height: $social-sharing-line-height;
+    font-size: $social-sharing-messaging-font-size;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  .social-sharing-options {
+    margin-top: $social-sharing-margin-top;
+    margin-bottom: $social-sharing-margin-bottom;
+    font-size: $social-sharing-options-font-size;
+    line-height: $social-sharing-line-height;
+
+    .social-share:hover,
+    .social-share:active,
+    .social-share:visited {
+      text-decoration: none;
+    }
+  }
+
+}

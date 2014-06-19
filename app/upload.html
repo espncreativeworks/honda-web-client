@@ -21,12 +21,15 @@
   <nav class="menu" id="flyout-menu">
     <div class="menu-wrap">
       <i class="icon-remove menu-close"></i>
-      <a href="#"><span class="logo-container espn text-hide">ESPN</span></a>
-      <a href="#">Home</a>
-      <a href="#">Official Rules</a>
-      <a href="#">Prizing</a>
-      <a href="#"><i class="icon-facebook"></i></a>
-      <a href="#"><i class="icon-twitter"></i></a>
+      <a href="index.html"><span class="logo-container espn text-hide">ESPN</span></a>
+      <a href="index.html">Home</a>
+      <a href="confirm.html?to=upload.html">Video Upload</a>
+      <a href="confirm.html?to=thanks.html">Sweepstakes Entry</a>
+      <a href="legal.html#official-rules">Official Rules</a>
+      <a href="prizing.html">Prizing</a>
+      <a href="http://disneyprivacycenter.com/" target="_blank">Privacy Policy</a>
+      <a href="#" class="social-share" data-control-action="share-facebook" title="Share on Facebook"><i class="icon-facebook"></i></a>
+      <a href="#" class="social-share" data-control-action="share-twitter" title="Share on Twitter"><i class="icon-twitter"></i></a>
     </div>
     <div id="menu-toggle"><i class="icon-reorder"></i></div>
   </nav>
@@ -90,7 +93,14 @@
           <div class="row upload-form-container">
             <div class="col-xs-12 col-md-3">
               <div class="feedback-container center-block">
-                <div class="thumbnail-placeholder"></div>
+                <div class="thumbnail-placeholder">
+                  <div class="thumbnail-icon-container">
+                    <span class="icon-honda icon-cloud-upload" data-icon-state="default"></span>
+                    <span class="icon-honda icon-cog icon-spin" data-icon-state="progress"></span>
+                    <span class="icon-honda icon-film" data-icon-state="complete"></span>
+                    <span class="icon-honda icon-warning-sign" data-icon-state="warning"></span>
+                  </div>
+                </div>
                 <div class="feedback">
                   <p class="message">Select video to upload</p>
                   <div class="progress-container">
@@ -106,26 +116,33 @@
               </div>
             </div>
             <div class="col-xs-12 col-md-9">
-              <div class="row">
-                <div class="col-xs-12">
-                  <textarea name="video-description" class="form-control" placeholder="Write a description of your child's SportsCenter worthy highlight in this space..."></textarea>
+              <form id="video-upload" action="thanks_from_upload.html" data-notify-url="http://455c1e3f.ngrok.com/api/uploads" role="form" enctype="multipart/form-data" method="GET">
+                <div class="form-group hide">
+                  <div class="col-xs-12">
+                    <!-- <input type="hidden" name="path_root" class="form-control"> -->
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <input type="file" name="video-file" accept="">
-                  <button class="btn btn-honda" data-control-action="select-video">
-                    <span class="btn-text">Select Video</span>
-                    <span class="btn-icon icon-chevron-right"></span>
-                  </button>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <textarea name="description" class="form-control" placeholder="Write a description of your child's SportsCenter worthy highlight in this space..."></textarea>
+                  </div>
                 </div>
-                <div class="col-xs-6">
-                  <button class="btn btn-honda" data-control-action="submit-video">
-                    <span class="btn-text">Submit Video</span>
-                    <span class="btn-icon icon-chevron-right"></span>
-                  </button>
+                <div class="form-group">
+                  <div class="col-xs-12 col-sm-6">
+                    <input type="file" name="video-file" accept="video/quicktime,video/x-quicktime,video/mp4,video/mpeg,video/m4v,video/x-m4v,video/wmv,video/x-ms-wmv,video/ogv,video/ogg,audio/ogg,video/3pp,video/webm,video/x-webm">
+                    <button class="btn btn-honda" data-control-action="select-video">
+                      <span class="btn-text">Select Video</span>
+                      <span class="btn-icon icon-folder-open"></span>
+                    </button>
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <button type="submit" class="btn btn-honda" data-control-action="submit-video" disabled>
+                      <span class="btn-text">Submit Video</span>
+                      <span class="btn-icon icon-chevron-right"></span>
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -134,8 +151,8 @@
   </div>
 
 
-  <div id="footer-content" class="container">
-    <div class="row">
+  <div id="footer-container" class="container">
+    <div id="footer-content" class="row">
 
       <div class="visible-xs col-xs-12">
         <div class="branding-container">
@@ -146,7 +163,7 @@
               </div>
             </div>
             <div class="col-xs-6">
-              <div class="logo-container honda">
+              <div class="logo-container honda dark">
                 <a href="" class="text-hide" title="Honda: The Official Vehicle of Little League Baseball" target="_blank">Honda: The Official Vehicle of Little League Baseball</a>
               </div>
             </div>

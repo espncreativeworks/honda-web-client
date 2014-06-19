@@ -1,9 +1,10 @@
 $honda-branding-footer-bg-color: $honda-dark-grey;
-$honda-branding-footer-border-color: $honda-red;
+$honda-branding-footer-border-color: #000;
 
-$branding-footer-max-width: 330px;
+$branding-footer-max-width: 300px;
 $branding-footer-height: 70px;
-$branding-footer-vertical-padding: 14px;
+$branding-footer-vertical-padding: 33px;
+$branding-footer-bg-image: $image-path + 'bg_logos.png';
 
 $logo-perfect-play-default: $image-path + 'logo_perfect_play_v2.png';
 $logo-perfect-play-hires: $image-path + 'logo_perfect_play_v2@2x.png';
@@ -19,6 +20,8 @@ $logo-little-league-height: 68px;
 
 $logo-honda-default: $image-path + 'logo_honda.png';
 $logo-honda-hires: $image-path + 'logo_honda@2x.png';
+$logo-honda-dark-default: $image-path + 'logo_honda_dark.png';
+$logo-honda-dark-hires: $image-path + 'logo_honda_dark@2x.png';
 $logo-honda-width: 93px;
 $logo-honda-height: 59px;
 
@@ -38,13 +41,23 @@ $logo-espn-height: 21px;
 
 .branding-footer {
   max-width: $branding-footer-max-width;
+  height: auto;
   margin-top: 30px;
   margin-bottom: 30px;
   padding-top: $branding-footer-vertical-padding;
   padding-bottom: $branding-footer-vertical-padding;
+  //padding-left: 20px;
   //border-top: 1px solid $honda-branding-footer-border-color;
-  //border-bottom: 1px solid $honda-branding-footer-border-color;
-  background-color: transparent;
+  //border: 1px solid $honda-branding-footer-border-color;
+  //@include box-shadow(inset 0 0 1em #333);
+  background-color: #000;
+}
+
+#footer-container .branding-footer {
+  height: auto;
+  margin-bottom: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .logo-container {
@@ -78,6 +91,13 @@ $logo-espn-height: 21px;
     height: $logo-honda-height;
     margin-top: ($branding-footer-height - $logo-honda-height) / 2;
     @include img-retina($logo-honda-default, $logo-honda-hires, $logo-honda-width, $logo-honda-height);
+  }
+
+  &.honda.dark {
+    width: $logo-honda-width;
+    height: $logo-honda-height;
+    margin-top: ($branding-footer-height - $logo-honda-height) / 2;
+    @include img-retina($logo-honda-dark-default, $logo-honda-dark-hires, $logo-honda-width, $logo-honda-height);
   }
 
   &.odyssey {
@@ -122,11 +142,18 @@ $logo-espn-height: 21px;
   }
 }
 
+/*
 @media (min-width: $screen-md-min){
   .branding-footer {
     background-color: $honda-branding-footer-bg-color;
+    background-image: url($branding-footer-bg-image);
+    background-position: center;
+    background-size: cover;
   }
+}
+*/
 
+@media (min-width: $screen-lg-min){
   .logo-container {
     &.odyssey {
       width: $logo-odyssey-width;
@@ -134,8 +161,4 @@ $logo-espn-height: 21px;
       background-size: $logo-odyssey-width $logo-odyssey-height;
     }
   }
-}
-
-@media (min-width: $screen-lg-min){
-
 }

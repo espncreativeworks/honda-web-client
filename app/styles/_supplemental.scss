@@ -1,0 +1,30 @@
+$supplemental-heading-color: $honda-red;
+$supplemental-heading-font-size: 20px;
+$supplemental-heading-font-weight: 700;
+
+.supplemental-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.supplemental-heading {
+  margin-top: 32px;
+  font-size: $supplemental-heading-font-size;
+  font-weight: $supplemental-heading-font-weight;
+  color: $supplemental-heading-color;
+}
+
+.supplemental-cta-container {
+  padding-top: 14px;
+  text-align: center;
+}
+
+@media (min-width: $screen-md-min){
+  .supplemental-heading {
+    margin-top: 0px;
+  }
+
+  .supplemental-cta-container {
+    text-align: left;
+  }
+}
