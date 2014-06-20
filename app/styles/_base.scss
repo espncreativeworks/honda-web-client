@@ -39,19 +39,15 @@ body {
   padding-top: 22px;
 }
 
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
-  #primary-content-column {
-    padding-top: 60px;
+@media (min-width: $screen-sm-min){
+
+  #primary-content {
+    padding-top: 80px;
   }
+
 }
 
 @media (min-width: $screen-md-min){
-
-  #primary-content {
-    margin-top: 110px;
-    padding-top: 40px;
-    min-height: 620px;
-  }
 
   body {
     position: relative;
@@ -60,6 +56,16 @@ body {
     background-repeat: repeat-x, repeat;
     background-color: none;
   }
+
+  #primary-content {
+    margin-top: 110px;
+    padding-top: 40px;
+    min-height: 620px;
+  }
+
+/*   #primary-content-column {
+  padding-top: 0px;
+} */
 
   .branding-container {
     margin-top: 0;
@@ -75,7 +81,9 @@ body {
 }
 
 @media (min-width: $screen-lg-min){
+
   #footer-content {
     width: 70%;
   }
+
 }
